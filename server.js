@@ -10,7 +10,9 @@ const app = express();
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://admin:Admin1234@gestor-pagos.rbbjl7w.mongodb.net/gestor-pagos', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => console.log('MongoDB Connected!')).catch(err => console.log(err));
+mongoose.connect('mongodb+srv://admin:Admin1234@gestor-pagos.rbbjl7w.mongodb.net/gestor-pagos')
+    .then(() => console.log('MongoDB Connected!'))
+    .catch(err => console.log(err));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/payments', paymentRoutes);
