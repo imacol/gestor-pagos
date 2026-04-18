@@ -15,6 +15,8 @@ mongoose.connect('mongodb+srv://admin:Admin1234@gestor-pagos.rbbjl7w.mongodb.net
     .catch(err => console.log(err));
     .then(() => console.log('MongoDB Connected!'))
     .catch(err => console.log(err));
+    .then(() => console.log('MongoDB Connected!'))
+    .catch(err => console.log(err));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/payments', paymentRoutes);
